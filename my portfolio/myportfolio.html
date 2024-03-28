@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">PORTFOLIO</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">home</a>
+            <a href="#about" style="--i:2">about</a>
+            <a href="#service" style="--i:3">service</a>
+            <a href="#portfolio" style="--i:4">portfolio</a>
+            <a href="#contact" style="--i:5">contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>HELLO,It's me</h3>
+            <h1>AJAY VADADORIYA</h1>
+            <h3>And I'M <span class="multiple"></span></h3>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquid voluptate debitis voluptas neque iste
+                molestiae explicabo ea harum? Laboriosam.</P>
+            <div class="social-media">
+                <a href="#" style="--i:6"><i class='bx bxl-facebook'></i></a>
+                <a href="#" style="--i:7"><i class='bx bxl-instagram'></i></a>
+                <a href="#" style="--i:8"><i class='bx bxl-telegram'></i></a>
+            </div>
+            <a href="#" class="btn" style="--i:9">Download CV</a>
+        </div>
+        <div class="home-image">
+            <img src="C:\Users\Admin\Pictures\home1.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="C:\Users\Admin\Pictures\home1.jpg" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">ABOUT<span>ME</span></h2>
+            <h3>JAVA DEVELOPER</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eveniet quos, reiciendis ipsam magnam
+                nihil eaque, totam vero in, voluptas illum aperiam fuga nostrum ab minus quo? Quam, numquam vitae!</p>
+            <a href="#" class="btn">READ MORE</a>
+        </div>
+    </section>
+    <section class="service" id="service">
+        <h2 class="heading">OUR<span>SERVICE</span></h2>
+        <div class="service-content">
+            <div class="service-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>JAVA DEVELOPER</h3>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur suscipit natus itaque eius veniam
+                    illum numquam ab.
+                    vero tenetur.</P>
+                    <a href="#" class="btn">READ MORE</a>
+            </div>
+
+            <div class="service-box">
+                <i class='bx bxl-android'></i>
+                <h3>ANDROID DEVELOPER</h3>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur suscipit natus itaque eius veniam
+                    illum numquam ab.
+                    vero tenetur.</P>
+                    <a href="#" class="btn">READ MORE</a>
+            </div>
+
+            <div class="service-box">
+                <i class='bx bxl-python'></i>
+                <h3>PYTHON DEVELOPER</h3>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur suscipit natus itaque eius veniam
+                    illum numquam ab.
+                    vero tenetur.</P>
+                    <a href="#" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">LATEST<span>PROJECTS</span></h2>
+        <div class="portfolio-content">
+
+            <div class="portfolio-box">
+                <img src="C:\Users\Admin\Downloads\portfolio.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>WEB DESINE</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ipsum.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="C:\Users\Admin\Downloads\portfolio1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>WEB DESINE</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ipsum.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="C:\Users\Admin\Downloads\portfolio2.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>WEB DESINE</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ipsum.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="C:\Users\Admin\Downloads\portfolio3.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>WEB DESINE</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ipsum.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="heading">CONTACT <span>ME!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="full name">
+                <input type="email" placeholder="e-mail address">
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="mobile number">
+                <input type="text" placeholder="mail subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="your message"></textarea>
+            <input type="button" value="send message" class="btn">
+        </form>
+    </section>
+    <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
