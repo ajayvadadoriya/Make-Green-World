@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # third party
-    
+    'paypal.standard.ipn',
     
     #custom app
     'core',
@@ -151,5 +151,9 @@ JAZZMIN_SETTINGS = {
     'copyright':"makegreenworldshop.com"
 }
 
+LOGIN_URL = "userauths:sign-in"
+
 AUTH_USER_MODEL = 'userauths.User'
 
+PAYPAL_RECEIVER_EMAIL = 'vadadoriyaajay@gmail.com'
+PAYPAL_TEST = True

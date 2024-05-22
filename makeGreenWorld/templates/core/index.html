@@ -16,7 +16,6 @@
                         <!-- Post Content -->
                         <div class="hero-slides-content text-center">
                             <h2>Plants exist in the weather and light rays that surround them</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque ante nec ipsum iaculis, ac iaculis ipsum porttitor. Vivamus cursus nisl lectus, id mattis nisl lobortis eu. Duis diam augue, dapibus ut dolor at, mattis maximus dolor.</p>
                             <div class="welcome-btn-group">
                                 <a href="{% url 'userauths:sign-up' %}" class="btn alazea-btn mr-30">GET REGISTERED</a>
                                 <a href="{% url 'core:product' %}" class="btn alazea-btn active">SHOP NOW</a>
@@ -37,10 +36,9 @@
                         <!-- Post Content -->
                         <div class="hero-slides-content text-center">
                             <h2>Plants exist in the weather and light rays that surround them</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque ante nec ipsum iaculis, ac iaculis ipsum porttitor. Vivamus cursus nisl lectus, id mattis nisl lobortis eu. Duis diam augue, dapibus ut dolor at, mattis maximus dolor.</p>
                             <div class="welcome-btn-group">
-                                <a href="#" class="btn alazea-btn mr-30">GET STARTED</a>
-                                <a href="#" class="btn alazea-btn active">CONTACT US</a>
+                                <a href="{% url 'userauths:sign-up' %}" class="btn alazea-btn mr-30">GET REGISTERED</a>
+                                <a href="{% url 'core:product' %}" class="btn alazea-btn active">SHOP NOW</a>
                             </div>
                         </div>
                     </div>
@@ -263,14 +261,14 @@
                             <a href="#">-{{p.get_percentage|floatformat:0}}%</a>
                         </div>
                         <div class="product-meta d-flex">
-                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
                             <input type="hidden" value="1" id="product-quantity" class="product-quantity-{{ p.id }}">
                             <input type="hidden" value="{{p.pid}}" class="product-pid-{{ p.id }}">
                             <input type="hidden" value="{{p.image.url}}" class="product-image-{{ p.id }}">
                             <input type="hidden" value="{{p.id}}" class="product-id-{{ p.id }}">
                             <input type="hidden" name="title" value="{{ p.title }}" class="product-title-{{ p.id }}">
-                            <button data-index="{{ p.id }}" class="btn alazea-btn ml-15 add-to-cart-btn" >Add to cart</button>
-                            <a href="{% url 'core:product-detail' p.pid %}" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                            <div class="d-flex">
+                                <button data-index="{{ p.id }}" class="alazea-btn ml-15 add-to-cart-btn" >Add to cart</button>
+                            </div>
                         </div>
                     </div>
                     <!-- Product Info -->
@@ -278,7 +276,9 @@
                         <a href="{% url 'core:product-detail' p.pid %}">
                             <p>{{ p.title }}</p>
                         </a>
+                       <div style="display: flex; justify-content: center;">
                         <span>₹</span><h6 class="current-product-price-{{p.id}}">{{p.price}}</h6>
+                       </div>
                     </div>
                 </div>
             </div>

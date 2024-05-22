@@ -32,7 +32,7 @@ def user_directory_path(instance,filename):
 
 
 class Category(models.Model):
-    cid = ShortUUIDField(unique=True, length=10, max_length=30, prefix="cat", alphabet="abcdefgh12345")
+    cid = ShortUUIDField(unique=True, length=10, max_length=30, prefix="cat")
     title=models.CharField(max_length=100,default="Food")
     image = models.ImageField(upload_to="category",default="category.jpg")
     
@@ -67,7 +67,7 @@ class SubCategory(models.Model):
 
 
 class Vendor(models.Model):
-    vid = ShortUUIDField(unique=True, length=10, max_length=30, prefix="Ven", alphabet="abcdefgh12345")
+    vid = ShortUUIDField(unique=True, length=10, max_length=30, prefix="Ven")
     title = models.CharField(max_length=100,default="Nestify")
     image = models.ImageField(upload_to=user_directory_path,default="Vendor.jpg")
     description = models.TextField(null=True, blank=True,default="I  am vendor")
@@ -91,7 +91,7 @@ class Vendor(models.Model):
         return self.title
     
 class Product(models.Model):
-    pid = ShortUUIDField(unique=True, length=10, max_length=30, alphabet="abcdefgh12345")
+    pid = ShortUUIDField(unique=True, length=10, max_length=30)
     user = models.ForeignKey(User,on_delete=models.SET_NULL, null=True)
     subcategory = models.ForeignKey(SubCategory, on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=100, default="Fresh Pear")
@@ -116,7 +116,7 @@ class Product(models.Model):
     featured = models.BooleanField(default=False)
     digital = models.BooleanField(default=False)
     
-    sku = ShortUUIDField(unique=True, length=4, max_length=30, prefix="sku", alphabet="abcdefgh12345")
+    sku = ShortUUIDField(unique=True, length=4, max_length=30, prefix="sku")
     
     date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(null=True, blank=True)
@@ -147,11 +147,12 @@ class ProductImages(models.Model):
         
 class CartOrder(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    price = models.DecimalField(max_digits=11, decimal_places=2, default="1.99")
+    
+    price = models.DecimalField(max_digits=11, decimal_places=2, default="0.00")
+    
     paid_status = models.BooleanField(default=False)
     order_date = models.DateTimeField(auto_now_add=True)
     product_status = models.CharField(choices=STATUS_CHOICE, max_length=30, default="process")
-    
     
     class Meta:
         verbose_name_plural="Cart Order"
@@ -191,24 +192,16 @@ class ProductReview(models.Model):
         return self.rating
 
    
-class wishlist(models.Model):
-    user = models.ForeignKey(User,on_delete=models.SET_NULL, null=True)
-    product = models.ForeignKey(Product,on_delete=models.SET_NULL, null=True)
-    date = models.DateTimeField(auto_now_add=True)
-     
-    class Meta:
-         verbose_name_plural="wishlists"
-        
-    def __str__(self):
-        return self.product.title
+
     
 
 class Add(models.Model):
     user = models.ForeignKey(User,on_delete=models.SET_NULL, null=True)
+    mobile = models.CharField(max_length=10, null=True)
     address = models.CharField(max_length=100, null=True)
     status = models.BooleanField(default=False)
     
     class Meta:
-        verbose_name_plural="Addesse"
+        verbose_name_plural="Address"
     
      

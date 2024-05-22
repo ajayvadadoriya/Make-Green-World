@@ -106,31 +106,37 @@
             </div>
 
             <div class="col-12 col-lg-4">
+                <a href="{% url 'core:cart' %}" class="alazea-btn">Go Back to Cart</a>
                 <div class="checkout-content">
                     <h5 class="title--">Your Order</h5>
                     <div class="products">
                         <div class="products-data">
                             <h5>Products:</h5>
+                            {% for product_id, item in cart_data.items %}
                             <div class="single-products d-flex justify-content-between align-items-center">
-                                <p>Recuerdos Plant</p>
-                                <h5>$9.99</h5>
+                                <p>{{ item.title }}</p>
+                                <p>{{ item.qty }}</p>
+                                <p>{{ item.price }}</p>
+                                <h5>{% widthratio item.price 1 item.qty %}</h5>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="subtotal d-flex justify-content-between align-items-center">
                         <h5>Subtotal</h5>
-                        <h5>$9.99</h5>
+                        <h5>{{ cart_total_amount|floatformat:2 }}</h5>
                     </div>
                     <div class="shipping d-flex justify-content-between align-items-center">
                         <h5>Shipping</h5>
-                        <h5>$3.00</h5>
+                        <h5>Free</h5>
                     </div>
                     <div class="order-total d-flex justify-content-between align-items-center">
                         <h5>Order Total</h5>
-                        <h5>$12.99</h5>
+                        <h5>{{ cart_total_amount|floatformat:2 }}</h5>
                     </div>
                     <div class="checkout-btn mt-30">
-                        <a href="#" class="btn alazea-btn w-100">Place Order</a>
+                        {{ paypal_payment_button.render }}
+                        <!-- <a href="#" class="btn alazea-btn w-100">Place Order</a> -->
                     </div>
                 </div>
             </div>

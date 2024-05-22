@@ -42,9 +42,9 @@
                             <!-- Top Header Content -->
                             <div class="top-header-meta">
                                 <a href="#" data-toggle="tooltip"><i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                    <span>Email: infodeercreative@gmail.com</span></a>
+                                    <span>Email: ajayvadadoriya@124gmail.com</span></a>
                                 <a href="#" data-toggle="tooltip"><i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>Call Us: +1 234 122 122</span></a>
+                                    <span>Call Us: +91 1234567890</span></a>
                             </div>
 
                             <!-- Top Header Content -->
@@ -54,6 +54,11 @@
                                 <div class="cart">
                                     <a href="{% url 'userauths:sign-out' %}"><i class="fa fa-user"
                                             aria-hidden="true"></i> <span style="padding-right: 30px;">Logout</span></a>
+                                </div>
+                                <!-- CD -->
+                                <div class="cart">
+                                    <a href="{% url 'core:dashboard' %}"><i class="fa fa-user"
+                                            aria-hidden="true"></i> <span style="padding-right: 30px;">Dashboard</span></a>
                                 </div>
                                 {% else %}
                                 <!-- Login -->
@@ -110,6 +115,7 @@
                                 <ul>
                                     <li><a href="{% url 'core:index' %}">Home</a></li>
                                     <li><a href="{% url 'core:about' %}">About</a></li>
+                                    <li><a href="{% url 'core:product' %}">Shop</a></li>
                                     {% for c in categories %}
                                     <li><a href="#">{{c.title}}</a>
                                         <ul class="dropdown">
@@ -122,7 +128,7 @@
                                         </ul>
                                     </li>
                                     {% endfor %}
-                                    <li><a href="portfolio.html">Offers</a></li>
+                                    <!-- <li><a href="portfolio.html">Offers</a></li> -->
                                 </ul>
 
                                 <!-- Search Icon -->
@@ -182,7 +188,7 @@
                             <div class="footer-logo mb-30">
                                 <a href="#"><img src="{% static 'img/core-img/logo8.png' %}" alt=""></a>
                             </div>
-                            <p>Lorem ipsum dolor sit samet, consectetur adipiscing elit. India situs atione mantor</p>
+                            <!-- <p>Lorem ipsum dolor sit samet, consectetur adipiscing elit. India situs atione mantor</p> -->
                             <div class="social-info">
                                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -199,31 +205,11 @@
                     <!-- Single Footer Widget -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget">
-                            <div class="widget-title">
-                                <h5>BEST SELLER</h5>
-                            </div>
+                            
 
-                            <!-- Single Best Seller Products -->
-                            <div class="single-best-seller-product d-flex align-items-center">
-                                <div class="product-thumbnail">
-                                    <a href="shop-details.html"><img src="{% static 'img/bg-img/4.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="shop-details.html">Cactus Flower</a>
-                                    <p>$10.99</p>
-                                </div>
-                            </div>
+                           
 
-                            <!-- Single Best Seller Products -->
-                            <div class="single-best-seller-product d-flex align-items-center">
-                                <div class="product-thumbnail">
-                                    <a href="shop-details.html"><img src="{% static 'img/bg-img/5.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="shop-details.html">Tulip Flower</a>
-                                    <p>$11.99</p>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
 
@@ -235,7 +221,7 @@
                             </div>
 
                             <div class="contact-information">
-                                <p><span>Address:</span> 505 Silk Rd, New York</p>
+                                <p><span>Address:</span>303, Sundarvan, Ahmedabad</p>
                                 <p><span>Phone:</span> +1 234 122 122</p>
                                 <p><span>Email:</span> info.deercreative@gmail.com</p>
                                 <p><span>Open hours:</span> Mon - Sun: 8 AM to 9 PM</p>
@@ -300,6 +286,7 @@
     <!-- Active js -->
     <script src="{% static 'js/active.js' %}"></script>
     <script src="{% static 'js/function.js' %}"></script>
+    
 </body>
 
 </html>

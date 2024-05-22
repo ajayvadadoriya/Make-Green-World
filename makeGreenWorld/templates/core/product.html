@@ -58,34 +58,7 @@
 <!-- ##### Shop Area Start ##### -->
 <section class="shop-page section-padding-0-100">
     <div class="container">
-        <div class="row">
-            <!-- Shop Sorting Data -->
-            <div class="col-12">
-                <div class="shop-sorting-data d-flex flex-wrap align-items-center justify-content-between">
-                    <!-- Shop Page Count -->
-                    <div class="shop-page-count">
-                        <p>Showing 1-9 of 72 results</p>
-                    </div>
-                    <!-- Search by Terms -->
-                    <div class="search_by_terms">
-                        <form action="#" method="post" class="form-inline">
-                            <select class="custom-select widget-title">
-                              <option selected>Short by Popularity</option>
-                              <option value="1">Short by Newest</option>
-                              <option value="2">Short by Sales</option>
-                              <option value="3">Short by Ratings</option>
-                            </select>
-                            <select class="custom-select widget-title">
-                              <option selected>Show: 9</option>
-                              <option value="1">12</option>
-                              <option value="2">18</option>
-                              <option value="3">24</option>
-                            </select>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <div class="row">
             <!-- Sidebar Area -->
@@ -119,70 +92,6 @@
                                 <a href="{% url 'core:product-category-list' s.sid %}">{{s.title}}</a>
                             </div>
                             {% endfor %}
-                        </div>
-                    </div>
-
-                   
-
-                    <!-- Shop Widget -->
-                    <div class="shop-widget best-seller mb-50">
-                        <h4 class="widget-title">Best Seller</h4>
-                        <div class="widget-desc">
-
-                            <!-- Single Best Seller Products -->
-                            <div class="single-best-seller-product d-flex align-items-center">
-                                <div class="product-thumbnail">
-                                    <a href="shop-details.html"><img src="{% static 'img/bg-img/4.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="shop-details.html">Cactus Flower</a>
-                                    <p>$10.99</p>
-                                    <div class="ratings">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Best Seller Products -->
-                            <div class="single-best-seller-product d-flex align-items-center">
-                                <div class="product-thumbnail">
-                                    <a href="shop-details.html"><img src="{% static 'img/bg-img/5.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="shop-details.html">Tulip Flower</a>
-                                    <p>$11.99</p>
-                                    <div class="ratings">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Best Seller Products -->
-                            <div class="single-best-seller-product d-flex align-items-center">
-                                <div class="product-thumbnail">
-                                    <a href="shop-details.html"><img src="{% static 'img/bg-img/34.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="shop-details.html">Recuerdos Plant</a>
-                                    <p>$9.99</p>
-                                    <div class="ratings">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>

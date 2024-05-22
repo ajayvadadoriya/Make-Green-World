@@ -56,8 +56,11 @@
                                     <td class="price"><span>{{item.price|floatformat:2}}</span></td>
                                     <td class="total_price"><span>{% widthratio item.price 1 item.qty %}</span></td>
                                     <td class="action"><button style="border: none;  background: none;"
-                                            class="delete-product" data-product="{{ product_id }}"><i
-                                                class="icon_close"></i></button></td>
+                                        class="update-product" data-product="{{ product_id }}"><i
+                                            class="icon_refresh"></i></button></td>
+                                <td class="action"><button style="border: none;  background: none;"
+                                        class="delete-product" data-product="{{ product_id }}"><i
+                                            class="icon_close"></i></button></td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
